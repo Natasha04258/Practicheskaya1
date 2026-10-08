@@ -1,0 +1,140 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="ClassDiagram" id="cd1">
+    <mxGraphModel dx="1848" dy="924" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_parent" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;fontSize=12;spacingLeft=6;spacingTop=4;" value="Родитель&#xa;———————&#xa;ФИО: string&#xa;телефон: string&#xa;e-mail: string&#xa;способОплаты: string" vertex="1">
+          <mxGeometry height="120" width="200" x="80" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Tz7ldgNbHJ3ieSeOSkxy-4" edge="1" parent="1" source="c_child" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="c_visit">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="60" y="390" />
+              <mxPoint x="60" y="910" />
+              <mxPoint x="580" y="910" />
+            </Array>
+            <mxPoint x="40" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c_child" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;fontSize=12;spacingLeft=6;spacingTop=4;" value="Ребёнок&#xa;———————&#xa;ФИО: string&#xa;датаРождения: date&#xa;статус: string" vertex="1">
+          <mxGeometry height="100" width="200" x="80" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="c_payment" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;fontSize=12;spacingLeft=6;spacingTop=4;" value="Платёж&#xa;———————&#xa;дата: date&#xa;сумма: decimal&#xa;способОплаты: string&#xa;статус: string" vertex="1">
+          <mxGeometry height="120" width="200" x="80" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="c_program" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;fontSize=12;spacingLeft=6;spacingTop=4;" value="Программа обучения&#xa;———————&#xa;название: string&#xa;длительность: int&#xa;стоимость: decimal&#xa;возрастнаяКатегория: string" vertex="1">
+          <mxGeometry height="120" width="220" x="70" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="c_group" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;fontSize=12;spacingLeft=6;spacingTop=4;" value="Группа&#xa;———————&#xa;номер: string&#xa;максРазмер: int&#xa;текущийСостав: int&#xa;статус: string" vertex="1">
+          <mxGeometry height="120" width="220" x="470" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="c_lesson" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;fontSize=12;spacingLeft=6;spacingTop=4;" value="Занятие&#xa;———————&#xa;дата: date&#xa;времяНачала: time&#xa;длительность: int&#xa;тема: string" vertex="1">
+          <mxGeometry height="120" width="220" x="470" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="c_visit" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;fontSize=12;spacingLeft=6;spacingTop=4;" value="Посещение&#xa;———————&#xa;дата: date&#xa;статус: string" vertex="1">
+          <mxGeometry height="80" width="220" x="470" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="c_teacher" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;fontSize=12;spacingLeft=6;spacingTop=4;" value="Преподаватель&#xa;———————&#xa;ФИО: string&#xa;специализация: string&#xa;телефон: string&#xa;статус: string" vertex="1">
+          <mxGeometry height="120" width="200" x="930" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="c_notify" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;fontSize=12;spacingLeft=6;spacingTop=4;" value="Уведомление&#xa;———————&#xa;тип: string&#xa;текст: string&#xa;датаОтправки: date&#xa;статусДоставки: string" vertex="1">
+          <mxGeometry height="120" width="220" x="480" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="r_pc" edge="1" parent="1" source="c_parent" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" target="c_child">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_pc_l1" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="1" vertex="1">
+          <mxGeometry height="20" width="20" x="165" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="r_pc_l2" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="1..*" vertex="1">
+          <mxGeometry height="20" width="30" x="165" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="r_chp_l1" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="1" vertex="1">
+          <mxGeometry height="20" width="20" x="40" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="r_chp_l2" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="1..*" vertex="1">
+          <mxGeometry height="20" width="30" x="165" y="545" as="geometry" />
+        </mxCell>
+        <mxCell id="r_child_program" edge="1" parent="1" source="c_child" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" target="c_program">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_chpr_l1" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="*" vertex="1">
+          <mxGeometry height="20" width="20" x="195" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="r_chpr_l2" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="1..*" vertex="1">
+          <mxGeometry height="20" width="30" x="165" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="r_program_group" edge="1" parent="1" source="c_program" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="c_lesson">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_pg_l1" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="1" vertex="1">
+          <mxGeometry height="20" width="20" x="580" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="r_pg_l2" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="1..*" vertex="1">
+          <mxGeometry height="20" width="30" x="585" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="r_group_child" edge="1" parent="1" source="c_group" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;startArrow=diamondThin;startFill=0;startSize=16;" target="c_child">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_gc_l1" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="1" vertex="1">
+          <mxGeometry height="20" width="20" x="430" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="r_gc_l2" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="1..*" vertex="1">
+          <mxGeometry height="20" width="30" x="300" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="r_group_lesson" edge="1" parent="1" source="c_group" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" target="c_lesson">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_gl_l1" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="1" vertex="1">
+          <mxGeometry height="20" width="20" x="590" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="r_gl_l2" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="1..*" vertex="1">
+          <mxGeometry height="20" width="30" x="890" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="r_lesson_visit" edge="1" parent="1" source="c_lesson" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;endArrow=diamondThin;endFill=1;endSize=16;" target="c_visit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_lv_l1" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="1" vertex="1">
+          <mxGeometry height="20" width="20" x="720" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="r_lv_l2" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="0..*" vertex="1">
+          <mxGeometry height="20" width="30" x="550" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="r_cv_l1" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="1" vertex="1">
+          <mxGeometry height="20" width="20" x="185" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="r_cv_l2" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="0..*" vertex="1">
+          <mxGeometry height="20" width="30" x="595" y="725" as="geometry" />
+        </mxCell>
+        <mxCell id="r_teacher_lesson" edge="1" parent="1" source="c_teacher" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" target="c_lesson">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_tl_l1" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="1" vertex="1">
+          <mxGeometry height="20" width="20" x="185" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="r_tl_l2" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="1..*" vertex="1">
+          <mxGeometry height="20" width="30" x="185" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="r_payment_program" edge="1" parent="1" source="c_payment" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" target="c_program">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_ppr_l1" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="*" vertex="1">
+          <mxGeometry height="20" width="20" x="310" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="r_ppr_l2" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="1" vertex="1">
+          <mxGeometry height="20" width="20" x="175" y="805" as="geometry" />
+        </mxCell>
+        <mxCell id="r_notify_parent" edge="1" parent="1" source="c_notify" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" target="c_parent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_np_l1" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="*" vertex="1">
+          <mxGeometry height="20" width="20" x="890" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="r_np_l2" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#000000;labelBackgroundColor=#ffffff;" value="1" vertex="1">
+          <mxGeometry height="20" width="20" x="290" y="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
